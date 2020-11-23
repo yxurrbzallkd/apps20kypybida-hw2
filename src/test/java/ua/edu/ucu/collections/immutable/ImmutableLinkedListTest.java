@@ -22,7 +22,8 @@ public class ImmutableLinkedListTest {
 
     @Test
     public void testAddAt() {
-        ImmutableLinkedList arr = new ImmutableLinkedList(new Object[] {5, 6, 9, 0});
+        ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(new Object[] {5, 6, 9, 0});
         ImmutableLinkedList arr1 = arr.add(2, 7);
         assertEquals(arr1.get(2), 7);
         assertEquals(arr.get(2), 9);
@@ -31,7 +32,8 @@ public class ImmutableLinkedListTest {
     @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testAddAtOutOfBounds() {
-        ImmutableLinkedList arr = new ImmutableLinkedList(new Object[] {5, 6, 9, 0});
+        ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(new Object[] {5, 6, 9, 0});
         arr.add(9, 2);
     }
 
@@ -48,13 +50,15 @@ public class ImmutableLinkedListTest {
     @Test(expected = IndexOutOfBoundsException.class)
     public void testAddAllAt() {
         Object[] obj = {3, 4, 5};
-        ImmutableLinkedList arr = new ImmutableLinkedList(new Object[] {1, 2});
+        ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(new Object[] {1, 2});
         arr.addAll(3, obj);
     }
 
     @Test
     public void testGet() {
-        ImmutableLinkedList arr = new ImmutableLinkedList(new Object[] {3, 4, 5});
+        ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(new Object[] {3, 4, 5});
         assertEquals(arr.get(0), 3);
         assertEquals(arr.get(2), 5);
     }
@@ -62,20 +66,23 @@ public class ImmutableLinkedListTest {
     @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testGetOutOfBounds() {
-        ImmutableLinkedList arr = new ImmutableLinkedList(new Object[] {3, 4, 5});
+        ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(new Object[] {3, 4, 5});
         arr.get(3);
     }
 
     @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testGetOutOfBoundsNeggative() {
-        ImmutableLinkedList arr = new ImmutableLinkedList(new Object[] {3, 4, 5});
+        ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(new Object[] {3, 4, 5});
         arr.get(-5);
     }
 
     @Test
     public void testRemove() {
-        ImmutableLinkedList arr = new ImmutableLinkedList(new Objcet[] {3, 4, 5});
+        ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(new Object[] {3, 4, 5});
         arr.remove(0);
         assertEquals(arr.toArray(), new Object[] {4, 5});
     }
@@ -83,7 +90,8 @@ public class ImmutableLinkedListTest {
     @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testRemoveOutOfBounds() {
-        ImmutableLinkedList arr = new ImmutableLinkedList(new Object[] {3, 4, 5});
+        ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(new Object[] {3, 4, 5});
         arr.remove(6);
     }
 
@@ -99,7 +107,8 @@ public class ImmutableLinkedListTest {
     @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testSetOutOfBounds() {
-        ImmutableLinkedList arr = new ImmutableLinkedList(new Object[] {3, 4, 5});
+        ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(new Object[] {3, 4, 5});
         arr.set(3, 7);
     }
 
