@@ -26,7 +26,9 @@ public class ImmutableArrayList implements ImmutableList{
 	throws IndexOutOfBoundsException{
 		//adds elemet at index, exception if index out of range
 		if ((index < 0) || (index >= this.size())) {
-			throw new IndexOutOfBoundsException("can't add at index "+index);
+			throw new 
+			IndexOutOfBoundsException("can't add at index "
+			+index);
 		}
 		Object[] newData = new Object[this.size() + 1];
 		for (int i = 0; i < index; i++) {
@@ -41,7 +43,8 @@ public class ImmutableArrayList implements ImmutableList{
 
     public ImmutableArrayList addAll(Object[] c) {
 		//append array to collection
-		Object[] newData = Arrays.copyOf(this.data, this.size() + c.length);
+		Object[] newData = 
+		Arrays.copyOf(this.data, this.size() + c.length);
 		for (int i = 0; i < c.length; i++) {
 			newData[i + this.size()] = c[i]; //
 		}
@@ -51,9 +54,12 @@ public class ImmutableArrayList implements ImmutableList{
 	public ImmutableArrayList addAll(int index, Object[] c) 
 	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
-			throw new IndexOutOfBoundsException("can't add at index "+index);
+			throw new 
+			IndexOutOfBoundsException("can't add at index "
+			+index);
 		}
-		Object[] newData = Arrays.copyOf(this.data, this.size() + c.length - index);
+		Object[] newData = Arrays.copyOf(this.data, 
+		this.size() + c.length - index);
 		for (int i = index; i < c.length; i++) {
 			newData[i - index] = c[i];
 		}
@@ -63,7 +69,9 @@ public class ImmutableArrayList implements ImmutableList{
 	public Object get(int index) 
 	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
-			throw new IndexOutOfBoundsException("can't add at index "+index);
+			throw new 
+			IndexOutOfBoundsException("can't add at index "
+			+index);
 		}
 		return this.data[index];
 	}
@@ -71,7 +79,8 @@ public class ImmutableArrayList implements ImmutableList{
 	public ImmutableArrayList remove(int index) 
 	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
-			throw new IndexOutOfBoundsException("can't add at index "+index);
+			throw new IndexOutOfBoundsException("can't add at index "
+			+index);
 		}
 		Object[] newData = new Object[this.size()-1];
 		for (int i = 0; i < index; i++) {
@@ -86,7 +95,9 @@ public class ImmutableArrayList implements ImmutableList{
 	public ImmutableArrayList set(int index, Object e) 
 	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
-			throw new IndexOutOfBoundsException("can't add at index "+index);
+			throw new 
+			IndexOutOfBoundsException("can't add at index "
+			+index);
 		}
 		Object[] newData = Arrays.copyOf(this.data, this.size());
 		newData[index] = e;

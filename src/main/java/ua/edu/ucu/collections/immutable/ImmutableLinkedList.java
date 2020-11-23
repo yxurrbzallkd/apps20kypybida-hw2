@@ -50,7 +50,9 @@ public class ImmutableLinkedList implements ImmutableList {
 	throws IndexOutOfBoundsException {
 		//adds elemet at index, exception if index out of range
 		if ((index < 0) || (index >= this.size())) {
-			throw new IndexOutOfBoundsException("can't add at index "+index);
+			throw new 
+			IndexOutOfBoundsException("can't add at index "
+			+index);
 		}
 		ImmutableLinkedList arr = this.copy();
 		Node n = arr.head;
@@ -79,7 +81,9 @@ public class ImmutableLinkedList implements ImmutableList {
 	public ImmutableLinkedList addAll(int index, Object[] c) 
 	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
-			throw new IndexOutOfBoundsException("can't add at index "+index);
+			throw new 
+			IndexOutOfBoundsException("can't add at index "
+			+index);
 		}
 		ImmutableLinkedList arr = this.copy();
 		Node t = arr.head.next;
@@ -99,7 +103,9 @@ public class ImmutableLinkedList implements ImmutableList {
 	public Object get(int index) 
 	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
-			throw new IndexOutOfBoundsException("can't get index "+index);
+			throw new 
+			IndexOutOfBoundsException("can't get index "
+			+index);
 		}
 		Node t = this.head.next;
 		for (int i = 0; i < index; i++) {
@@ -111,7 +117,9 @@ public class ImmutableLinkedList implements ImmutableList {
 	public ImmutableLinkedList remove(int index) 
 	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
-			throw new IndexOutOfBoundsException("can't remove from index "+index);
+			throw new 
+			IndexOutOfBoundsException("can't remove from index "
+			+index);
 		}
 		ImmutableLinkedList arr = this.copy();
 		Node t = arr.head.next;
@@ -123,9 +131,12 @@ public class ImmutableLinkedList implements ImmutableList {
 		return arr;
 	}
 
-	public ImmutableLinkedList set(int index, Object e) throws IndexOutOfBoundsException {
+	public ImmutableLinkedList set(int index, Object e) 
+	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
-			throw new IndexOutOfBoundsException("can't set the index "+index);
+			throw new 
+			IndexOutOfBoundsException("can't set the index "
+			+index);
 		}
 		ImmutableLinkedList arr = this.copy();
 		Node t = arr.head.next;
