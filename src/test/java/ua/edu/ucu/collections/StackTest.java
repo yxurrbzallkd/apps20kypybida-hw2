@@ -30,6 +30,6 @@ public class StackTest {
         s.push(7);
         assertEquals(s.peek(), 7);
         s.push(5);
-        assertEquals(s.peek(), 7);
+        assertEquals(s.peek(), 5);
     }
 }
