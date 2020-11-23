@@ -22,7 +22,8 @@ public class ImmutableArrayList implements ImmutableList{
 		newData[this.size()] = e;
 		return new ImmutableArrayList(newData);
 	}
-    public ImmutableArrayList add(int index, Object e) throws IndexOutOfBoundsException{
+	public ImmutableArrayList add(int index, Object e) 
+	throws IndexOutOfBoundsException{
 		//adds elemet at index, exception if index out of range
 		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);
@@ -47,7 +48,8 @@ public class ImmutableArrayList implements ImmutableList{
 		return new ImmutableArrayList(newData);
 	}
 
-    public ImmutableArrayList addAll(int index, Object[] c) throws IndexOutOfBoundsException {
+	public ImmutableArrayList addAll(int index, Object[] c) 
+	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);
 		}
@@ -58,14 +60,16 @@ public class ImmutableArrayList implements ImmutableList{
 		return new ImmutableArrayList(newData);
 	}
 
-    public Object get(int index) throws IndexOutOfBoundsException {
+	public Object get(int index) 
+	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);
 		}
 		return this.data[index];
 	}
 
-    public ImmutableArrayList remove(int index) throws IndexOutOfBoundsException {
+	public ImmutableArrayList remove(int index) 
+	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);
 		}
@@ -79,7 +83,8 @@ public class ImmutableArrayList implements ImmutableList{
 		return new ImmutableArrayList(newData);
 	}
 
-	public ImmutableArrayList set(int index, Object e) throws IndexOutOfBoundsException {
+	public ImmutableArrayList set(int index, Object e) 
+	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);
 		}

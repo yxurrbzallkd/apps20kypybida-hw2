@@ -46,7 +46,8 @@ public class ImmutableLinkedList implements ImmutableList {
 		return arr;
 	}
 
-    public ImmutableLinkedList add(int index, Object e) throws IndexOutOfBoundsException {
+	public ImmutableLinkedList add(int index, Object e) 
+	throws IndexOutOfBoundsException {
 		//adds elemet at index, exception if index out of range
 		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);
@@ -75,7 +76,8 @@ public class ImmutableLinkedList implements ImmutableList {
 		return arr;
 	}
 
-    public ImmutableLinkedList addAll(int index, Object[] c) throws IndexOutOfBoundsException {
+	public ImmutableLinkedList addAll(int index, Object[] c) 
+	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);
 		}
@@ -94,7 +96,8 @@ public class ImmutableLinkedList implements ImmutableList {
 		return arr;
 	}
 
-    public Object get(int index) throws IndexOutOfBoundsException {
+	public Object get(int index) 
+	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't get index "+index);
 		}
@@ -105,7 +108,8 @@ public class ImmutableLinkedList implements ImmutableList {
 		return t.item;
 	}
 
-    public ImmutableLinkedList remove(int index) throws IndexOutOfBoundsException {
+	public ImmutableLinkedList remove(int index) 
+	throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't remove from index "+index);
 		}
