@@ -70,7 +70,6 @@ public class ImmutableArrayListTest {
         arr.get(3);
     }
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testGetOutOfBoundsNeggative() {
         ImmutableArrayList arr = new ImmutableArrayList(new Object[] {3, 4, 5});

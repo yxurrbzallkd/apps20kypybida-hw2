@@ -29,7 +29,6 @@ public class ImmutableLinkedListTest {
         assertEquals(arr.get(2), 9);
     }
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testAddAtOutOfBounds() {
         ImmutableLinkedList arr = new ImmutableLinkedList();
@@ -69,7 +68,6 @@ public class ImmutableLinkedListTest {
         arr.get(3);
     }
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testGetOutOfBoundsNeggative() {
         ImmutableLinkedList arr = new ImmutableLinkedList();
@@ -101,7 +99,6 @@ public class ImmutableLinkedListTest {
         assertEquals(arr1.get(0), 8);
     }
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testSetOutOfBounds() {
         ImmutableLinkedList arr = new ImmutableLinkedList();
