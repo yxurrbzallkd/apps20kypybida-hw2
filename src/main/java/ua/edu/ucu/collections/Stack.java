@@ -18,6 +18,9 @@ public class Stack {
 	}
 	public Object pop() {
 		//Removes and returns the object from the top of the Stack
+		if (this.stack.isEmpty()) {
+			return null;
+		}
 		Object top = this.stack.getLast();
 		this.stack = this.stack.removeLast();
 		return top;
