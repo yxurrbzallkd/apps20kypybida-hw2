@@ -15,7 +15,8 @@ public class ImmutableLinkedList implements ImmutableList {
 		}
 
 		public Node copy() {
-			return new Node(this.item, this.next, this.previous);
+			return new 
+			Node(this.item, this.next, this.previous);
 		}
 	}
 
