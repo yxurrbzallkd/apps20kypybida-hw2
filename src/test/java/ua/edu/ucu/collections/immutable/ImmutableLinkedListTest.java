@@ -94,6 +94,7 @@ public class ImmutableLinkedListTest {
     public void testSet() {
         Object[] obj = {3, 4, 5};
         ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(obj);
         ImmutableLinkedList arr1 = arr.set(0, 8);
         assertEquals(arr.toArray(), obj);
         assertEquals(arr1.get(0), 8);
@@ -110,6 +111,7 @@ public class ImmutableLinkedListTest {
     public void testIndexOf() {
         Object[] obj = {3, 4, 5};
         ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(obj);
         assertEquals(arr.indexOf(4), 1);
         assertEquals(arr.indexOf(8), -1);
     }
