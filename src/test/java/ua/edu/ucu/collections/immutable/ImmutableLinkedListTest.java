@@ -237,13 +237,4 @@ public class ImmutableLinkedListTest {
         arr = new ImmutableLinkedList();
         arr.removeLast();
     }
-
-    @Test
-    public void testCopy() {
-        Object[] obj = {3, 4, 5};
-        ImmutableLinkedList arr = new ImmutableLinkedList();
-        arr = arr.addAll(obj);
-        ImmutableLinkedList arr1 = arr.copy();
-        assertEquals(arr.toArray(), arr1.toarray());
-    }
 }
