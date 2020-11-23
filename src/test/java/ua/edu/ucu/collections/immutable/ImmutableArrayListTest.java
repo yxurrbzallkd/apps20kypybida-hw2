@@ -142,4 +142,12 @@ public class ImmutableArrayListTest {
         assertEquals(arr1.isEmpty(), true);
         assertEquals(arr2.isEmpty(), true);
     }
+
+    @Test
+    public void testCopy() {
+        Object[] obj = {3, 4, 5};
+        ImmutableArrayList arr = new ImmutableArrayList(obj);
+        ImmutableArrayList arr1 = arr.copy();
+        assertEquals(arr.toArray(), arr1.toarray());
+    }
 }
