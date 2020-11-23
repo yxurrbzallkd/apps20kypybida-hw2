@@ -46,7 +46,6 @@ public class ImmutableLinkedListTest {
         assertEquals(arr1.toArray(), obj);
     }
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testAddAllAt() {
         Object[] obj = {3, 4, 5};
@@ -63,7 +62,6 @@ public class ImmutableLinkedListTest {
         assertEquals(arr.get(2), 5);
     }
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testGetOutOfBounds() {
         ImmutableLinkedList arr = new ImmutableLinkedList();
@@ -87,7 +85,6 @@ public class ImmutableLinkedListTest {
         assertEquals(arr.toArray(), new Object[] {4, 5});
     }
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testRemoveOutOfBounds() {
         ImmutableLinkedList arr = new ImmutableLinkedList();
@@ -183,7 +180,6 @@ public class ImmutableLinkedListTest {
         assertEquals(arr1.getFirst(), 1);
 	}
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testGetFirstOutOfBounds() {
 		ImmutableLinkedList arr;
@@ -199,9 +195,8 @@ public class ImmutableLinkedListTest {
         arr1 = arr.addAll(new Object[] {1, 2, 3, 4, 5});
         assertEquals(arr.isEmpty(), true);
         assertEquals(arr1.getLast(), 5);
-	}
+    }
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testGetLastOutOfBounds() {
 		ImmutableLinkedList arr;
@@ -219,7 +214,6 @@ public class ImmutableLinkedListTest {
         assertEquals(arr1.getFirst(), 2);
 	}
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testRemoveFirstOutOfBounds() {
 		ImmutableLinkedList arr;
@@ -237,7 +231,6 @@ public class ImmutableLinkedListTest {
         assertEquals(arr1.getLast(), 1);
 	}
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testRemoveLastOutOfBounds() {
 		ImmutableLinkedList arr;

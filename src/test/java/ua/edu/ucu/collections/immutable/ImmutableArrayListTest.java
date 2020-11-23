@@ -35,7 +35,6 @@ public class ImmutableArrayListTest {
         assertEquals(arr.get(2), 9);
     }
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testAddAtOutOfBounds() {
         ImmutableArrayList arr = new ImmutableArrayList(new Object[] {5, 6, 9, 0});
@@ -51,7 +50,6 @@ public class ImmutableArrayListTest {
         assertEquals(arr1.toArray(), obj);
     }
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testAddAllAt() {
         Object[] obj = {3, 4, 5};
@@ -66,7 +64,6 @@ public class ImmutableArrayListTest {
         assertEquals(arr.get(2), 5);
     }
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testGetOutOfBounds() {
         ImmutableArrayList arr = new ImmutableArrayList(new Object[] {3, 4, 5});
@@ -87,7 +84,6 @@ public class ImmutableArrayListTest {
         assertEquals(arr.toArray(), new Object[] {4, 5});
     }
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testRemoveOutOfBounds() {
         ImmutableArrayList arr = new ImmutableArrayList(new Object[] {3, 4, 5});
@@ -103,7 +99,6 @@ public class ImmutableArrayListTest {
         assertEquals(arr1.get(0), 8);
     }
 
-    @Test
     @Test(expected = IndexOutOfBoundsException.class)
     public void testSetOutOfBounds() {
         ImmutableArrayList arr = new ImmutableArrayList(new Object[] {3, 4, 5});
