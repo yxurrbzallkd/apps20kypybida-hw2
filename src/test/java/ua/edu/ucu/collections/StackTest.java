@@ -16,7 +16,7 @@ public class StackTest {
 
     @Test
     public void testPop() {
-        Stack s = new Queue();
+        Stack s = new Stack();
         s.push(7);
         s.push(5);
         assertEquals(s.pop(), 5);
@@ -26,7 +26,7 @@ public class StackTest {
 
 	@Test
     public void testPush() {
-        Stack s = new Queue();
+        Stack s = new Stack();
         s.push(7);
         assertEquals(s.peek(), 7);
         s.push(5);
