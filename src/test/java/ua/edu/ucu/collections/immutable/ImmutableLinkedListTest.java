@@ -132,7 +132,8 @@ public class ImmutableLinkedListTest {
     @Test
     public void testClear() {
         Object[] obj = {3, 4, 5};
-        ImmutableLinkedList arr = new ImmutableLinkedList(obj);
+        ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(obj);
         ImmutableLinkedList arr1 = arr.clear();
         assertEquals(arr.size(), obj.length);
         assertEquals(arr1.size(), 0);
@@ -141,7 +142,8 @@ public class ImmutableLinkedListTest {
     @Test
     public void testIsEmpty() {
         Object[] obj = {3, 4, 5};
-        ImmutableLinkedList arr = new ImmutableLinkedList(obj);
+        ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(obj);
         ImmutableLinkedList arr1 = arr.clear();
         ImmutableLinkedList arr2 = new ImmutableLinkedList();
         assertEquals(arr.isEmpty(), false);
