@@ -96,7 +96,7 @@ public class ImmutableLinkedList implements ImmutableList{
 
     public Object get(int index) throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())){
-			throw new IndexOutOfBoundsException("can't add at index "+index);
+			throw new IndexOutOfBoundsException("can't get index "+index);
 		}
 		Node t = this.head.next;
 		for (int i = 0; i < index; i++){
@@ -107,7 +107,7 @@ public class ImmutableLinkedList implements ImmutableList{
 
     public ImmutableLinkedList remove(int index) throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())){
-			throw new IndexOutOfBoundsException("can't add at index "+index);
+			throw new IndexOutOfBoundsException("can't remove from index "+index);
 		}
 		ImmutableLinkedList arr = this.copy();
 		Node t = arr.head.next;
@@ -121,7 +121,7 @@ public class ImmutableLinkedList implements ImmutableList{
 
 	public ImmutableLinkedList set(int index, Object e) throws IndexOutOfBoundsException {
 		if ((index < 0) || (index >= this.size())){
-			throw new IndexOutOfBoundsException("can't add at index "+index);
+			throw new IndexOutOfBoundsException("can't set the index "+index);
 		}
 		ImmutableLinkedList arr = this.copy();
 		Node t = arr.head.next;
@@ -195,18 +195,18 @@ public class ImmutableLinkedList implements ImmutableList{
 		return this.add(e);
 	}
 
-	public Object getFirst() {
+	public Object getFirst() throws IndexOutOfBoundsException{
 		//returns first element
 		if (this.isEmpty()){
-			return new Exception("can't get first object of empty list");
+			throw new IndexOutOfBoundsException("can't get first object of empty list");
 		}
 		return this.get(0);
 	}
 
-	public Object getLast() {
+	public Object getLast() throws IndexOutOfBoundsException{
 		//returns last element
 		if (this.isEmpty()) {
-			return new Exception("can't get last object of empty list");
+			throw new IndexOutOfBoundsException("can't get last object of empty list");
 		}
 		return this.get(this.size()-1);
 	}
