@@ -48,12 +48,12 @@ public class ImmutableLinkedList implements ImmutableList{
 
     public ImmutableLinkedList add(int index, Object e) throws IndexOutOfBoundsException{
 		//adds elemet at index, exception if index out of range
-		if ((index < 0) || (index >= this.size())){
+		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);
 		}
 		ImmutableLinkedList arr = this.copy();
 		Node n = arr.head;
-		for (int i = 0; i < index; i++){
+		for (int i = 0; i < index; i++) {
 			n = n.next;
 		}
 		Node newNode = new Node(e, n, n.next);
@@ -66,7 +66,7 @@ public class ImmutableLinkedList implements ImmutableList{
 		//append array to collection
 		ImmutableLinkedList arr = this.copy();
 		Node n;
-		for (Object e:c){
+		for (Object e:c) {
 			n = new Node(e, arr.tail, arr.tail.previous);
 			arr.tail.previous.next = n;
 			arr.tail.previous = n;
@@ -76,16 +76,16 @@ public class ImmutableLinkedList implements ImmutableList{
 	}
 
     public ImmutableLinkedList addAll(int index, Object[] c) throws IndexOutOfBoundsException {
-		if ((index < 0) || (index >= this.size())){
+		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);
 		}
 		ImmutableLinkedList arr = this.copy();
 		Node t = arr.head.next;
-		for (int i = 0; i < index; i++){
+		for (int i = 0; i < index; i++) {
 			t = t.next;
 		}
 		Node n;
-		for (Object e:c){
+		for (Object e:c) {
 			n = new Node(e, t, t.previous);
 			t.previous.next = n;
 			t.previous = n;
@@ -95,23 +95,23 @@ public class ImmutableLinkedList implements ImmutableList{
 	}
 
     public Object get(int index) throws IndexOutOfBoundsException {
-		if ((index < 0) || (index >= this.size())){
+		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't get index "+index);
 		}
 		Node t = this.head.next;
-		for (int i = 0; i < index; i++){
+		for (int i = 0; i < index; i++) {
 			t = t.next;
 		}
 		return t.item;
 	}
 
     public ImmutableLinkedList remove(int index) throws IndexOutOfBoundsException {
-		if ((index < 0) || (index >= this.size())){
+		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't remove from index "+index);
 		}
 		ImmutableLinkedList arr = this.copy();
 		Node t = arr.head.next;
-		for (int i = 0; i < index; i++){
+		for (int i = 0; i < index; i++) {
 			t = t.next;
 		}
 		t.previous.next = t.next;
@@ -120,12 +120,12 @@ public class ImmutableLinkedList implements ImmutableList{
 	}
 
 	public ImmutableLinkedList set(int index, Object e) throws IndexOutOfBoundsException {
-		if ((index < 0) || (index >= this.size())){
+		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't set the index "+index);
 		}
 		ImmutableLinkedList arr = this.copy();
 		Node t = arr.head.next;
-		for (int i = 0; i < index; i++){
+		for (int i = 0; i < index; i++) {
 			t = t.next;
 		}
 		t.item = e;
@@ -134,8 +134,8 @@ public class ImmutableLinkedList implements ImmutableList{
 
     public int indexOf(Object e) {
 		Node n = this.head.next;
-		for (int i = 0; i < this.size(); i++){
-			if (n.item == e){
+		for (int i = 0; i < this.size(); i++) {
+			if (n.item == e) {
 				return i;
 			}
 			n = n.next;
@@ -158,7 +158,7 @@ public class ImmutableLinkedList implements ImmutableList{
     public Object[] toArray() {
 		Object[] data = new Object[this.size()];
 		Node n = this.head.next;
-		for (int i = 0; i < this.size(); i++){
+		for (int i = 0; i < this.size(); i++) {
 			data[i] = n.item;
 			n = n.next;
 		}
@@ -168,7 +168,7 @@ public class ImmutableLinkedList implements ImmutableList{
 	private ImmutableLinkedList copy() {
 		Node newHead = this.head.copy();
 		Node n = newHead;
-		for (int i = 0; i < this.size()+1; i++){
+		for (int i = 0; i < this.size()+1; i++) {
 			n.next = n.next.copy();
 			n.next.previous = n;
 			n = n.next;
@@ -191,19 +191,19 @@ public class ImmutableLinkedList implements ImmutableList{
 		return arr;
 	}
 
-	public ImmutableLinkedList addLast(Object e){
+	public ImmutableLinkedList addLast(Object e) {
 		return this.add(e);
 	}
 
-	public Object getFirst() throws IndexOutOfBoundsException{
+	public Object getFirst() throws IndexOutOfBoundsException {
 		//returns first element
-		if (this.isEmpty()){
+		if (this.isEmpty()) {
 			throw new IndexOutOfBoundsException("can't get first object of empty list");
 		}
 		return this.get(0);
 	}
 
-	public Object getLast() throws IndexOutOfBoundsException{
+	public Object getLast() throws IndexOutOfBoundsException {
 		//returns last element
 		if (this.isEmpty()) {
 			throw new IndexOutOfBoundsException("can't get last object of empty list");

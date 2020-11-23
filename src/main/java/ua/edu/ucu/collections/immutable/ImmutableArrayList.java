@@ -48,39 +48,39 @@ public class ImmutableArrayList implements ImmutableList{
 	}
 
     public ImmutableArrayList addAll(int index, Object[] c) throws IndexOutOfBoundsException {
-		if ((index < 0) || (index >= this.size())){
+		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);
 		}
 		Object[] newData = Arrays.copyOf(this.data, this.size()+c.length-index);
-		for (int i = index; i < c.length; i++){
+		for (int i = index; i < c.length; i++) {
 			newData[i-index] = c[i];
 		}
 		return new ImmutableArrayList(newData);
 	}
 
     public Object get(int index) throws IndexOutOfBoundsException {
-		if ((index < 0) || (index >= this.size())){
+		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);
 		}
 		return this.data[index];
 	}
 
     public ImmutableArrayList remove(int index) throws IndexOutOfBoundsException {
-		if ((index < 0) || (index >= this.size())){
+		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);
 		}
 		Object[] newData = new Object[this.size()-1];
-		for (int i = 0; i < index; i++){
+		for (int i = 0; i < index; i++) {
 			newData[i] = this.get(i);
 		}
-		for (int i = index+1; i < this.size(); i++){
+		for (int i = index+1; i < this.size(); i++) {
 			newData[i-1] = this.get(i);
 		}
 		return new ImmutableArrayList(newData);
 	}
 
 	public ImmutableArrayList set(int index, Object e) throws IndexOutOfBoundsException {
-		if ((index < 0) || (index >= this.size())){
+		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);
 		}
 		Object[] newData = Arrays.copyOf(this.data, this.size());
@@ -89,8 +89,8 @@ public class ImmutableArrayList implements ImmutableList{
 	}
 
     public int indexOf(Object e) {
-		for (int i = 0; i < this.size(); i++){
-			if (this.get(i) == e){
+		for (int i = 0; i < this.size(); i++) {
+			if (this.get(i) == e) {
 				return i;
 			}
 		}
