@@ -23,7 +23,7 @@ public class ImmutableArrayListTest {
     public void testAdd() {
         ImmutableArrayList arr = new ImmutableArrayList();
         ImmutableArrayList arr1 = arr.add(9);
-        assertEquals(arr.Empty(), true);
+        assertEquals(arr.isEmpty(), true);
         assertEquals(arr1.toArray(), new Object[] {9});
     }
 
@@ -47,7 +47,7 @@ public class ImmutableArrayListTest {
         Object[] obj = {3, 4, 5};
         ImmutableArrayList arr = new ImmutableArrayList();
         ImmutableArrayList arr1 = arr.addAll(obj);
-        assertEquals(arr.Empty(), true);
+        assertEquals(arr.isEmpty(), true);
         assertEquals(arr1.toArray(), obj);
     }
 

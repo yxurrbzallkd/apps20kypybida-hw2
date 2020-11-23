@@ -16,7 +16,7 @@ public class ImmutableLinkedListTest {
     public void testAdd() {
         ImmutableLinkedList arr = new ImmutableLinkedList();
         ImmutableLinkedList arr1 = arr.add(9);
-        assertEquals(arr.Empty(), true);
+        assertEquals(arr.isEmpty(), true);
         assertEquals(arr1.toArray(), new Object[] {9});
     }
 
@@ -42,7 +42,7 @@ public class ImmutableLinkedListTest {
         Object[] obj = {3, 4, 5};
         ImmutableLinkedList arr = new ImmutableLinkedList();
         ImmutableLinkedList arr1 = arr.addAll(obj);
-        assertEquals(arr.Empty(), true);
+        assertEquals(arr.isEmpty(), true);
         assertEquals(arr1.toArray(), obj);
     }
 
@@ -156,7 +156,7 @@ public class ImmutableLinkedListTest {
         arr = new ImmutableLinkedList();
         arr1 = arr.addFirst(9);
         arr1 = arr1.addFirst(1);
-        assertEquals(arr.Empty(), true);
+        assertEquals(arr.isEmpty(), true);
         assertEquals(arr1.toArray(), new Object[] {1, 9});
 	}
 
@@ -167,7 +167,7 @@ public class ImmutableLinkedListTest {
         arr = new ImmutableLinkedList();
         arr1 = arr.addLast(9);
         arr1 = arr1.addLast(6);
-        assertEquals(arr.Empty(), true);
+        assertEquals(arr.isEmpty(), true);
         assertEquals(arr1.toArray(), new Object[] {9, 6});
 	}
 
@@ -177,7 +177,7 @@ public class ImmutableLinkedListTest {
 		ImmutableLinkedList arr1;
         arr = new ImmutableLinkedList();
         arr1 = arr.addAll(new Object[] {1, 2, 3, 4, 5});
-        assertEquals(arr.Empty(), true);
+        assertEquals(arr.isEmpty(), true);
         assertEquals(arr1.getFirst(), 1);
 	}
 
@@ -195,7 +195,7 @@ public class ImmutableLinkedListTest {
 		ImmutableLinkedList arr1;
         arr = new ImmutableLinkedList();
         arr1 = arr.addAll(new Object[] {1, 2, 3, 4, 5});
-        assertEquals(arr.Empty(), true);
+        assertEquals(arr.isEmpty(), true);
         assertEquals(arr1.getLast(), 5);
 	}
 
