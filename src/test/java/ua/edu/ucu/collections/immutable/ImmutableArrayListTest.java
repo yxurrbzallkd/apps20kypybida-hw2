@@ -3,6 +3,8 @@ package ua.edu.ucu.collections.immutable;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import java.rmi.server.ObjID;
+
 public class ImmutableArrayListTest {
     
     @Test
@@ -79,8 +81,9 @@ public class ImmutableArrayListTest {
     @Test
     public void testRemove() {
         ImmutableArrayList arr = new ImmutableArrayList(new Object[] {3, 4, 5});
-        arr.remove(0);
-        assertEquals(arr.toArray(), new Object[] {4, 5});
+        ImmutableArrayList arr1 = arr.remove(0);
+        assertEquals(arr.toArray(), new Object[] {3, 4, 5});
+        assertEquals(arr1.toArray(), new Object[] {4, 5});
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
@@ -107,7 +110,7 @@ public class ImmutableArrayListTest {
     @Test
     public void testIndexOf() {
         Object[] obj = {3, 4, 5};
-        ImmutableArrayList arr = new ImmutableArrayList();
+        ImmutableArrayList arr = new ImmutableArrayList(obj);
         assertEquals(arr.indexOf(4), 1);
         assertEquals(arr.indexOf(8), -1);
     }
