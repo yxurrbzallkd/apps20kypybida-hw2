@@ -195,18 +195,22 @@ public class ImmutableLinkedList implements ImmutableList {
 		return this.add(e);
 	}
 
-	public Object getFirst() throws IndexOutOfBoundsException {
+	public Object getFirst() 
+	throws IndexOutOfBoundsException {
 		//returns first element
 		if (this.isEmpty()) {
-			throw new IndexOutOfBoundsException("can't get first object of empty list");
+			throw new 
+			IndexOutOfBoundsException("can't get first object of empty list");
 		}
 		return this.get(0);
 	}
 
-	public Object getLast() throws IndexOutOfBoundsException {
+	public Object getLast() 
+	throws IndexOutOfBoundsException {
 		//returns last element
 		if (this.isEmpty()) {
-			throw new IndexOutOfBoundsException("can't get last object of empty list");
+			throw new 
+			IndexOutOfBoundsException("can't get last object of empty list");
 		}
 		return this.get(this.size()-1);
 	}
