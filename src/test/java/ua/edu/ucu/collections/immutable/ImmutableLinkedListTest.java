@@ -91,6 +91,13 @@ public class ImmutableLinkedListTest {
         arr.remove(6);
     }
 
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testRemoveOutOfBoundsNegative() {
+        ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(new Object[] {3, 4, 5});
+        arr.remove(-5);
+    }
+
     @Test
     public void testSet() {
         Object[] obj = {3, 4, 5};

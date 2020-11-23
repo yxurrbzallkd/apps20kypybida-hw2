@@ -90,6 +90,12 @@ public class ImmutableArrayListTest {
         arr.remove(6);
     }
 
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testRemoveOutOfBoundsNegative() {
+        ImmutableArrayList arr = new ImmutableArrayList(new Object[] {3, 4, 5});
+        arr.remove(-3);
+    }
+
     @Test
     public void testSet() {
         Object[] obj = {3, 4, 5};
