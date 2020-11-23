@@ -36,9 +36,9 @@ public class QueueTest {
     @Test
     public void testtoString() {
         Queue q = new Queue();
-        s.enqueue(7);
-        s.enqueue(5);
-        s.enqueue(2);
-        assertEquals(s.toString(), "Queue HEAD > [7, 5, 2]");
+        q.enqueue(7);
+        q.enqueue(5);
+        q.enqueue(2);
+        assertEquals(q.toString(), "Queue HEAD > [7, 5, 2]");
     }
 }
