@@ -4,9 +4,32 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class StackTest {
-    
+
     @Test
-    public void testSomeMethod() {
+    public void testPeek() {
+        Stack s = new Stack();
+        assertEquals(s.peek(), null);
+        s.push(7);
+        s.push(5);
+        assertEquals(s.peek(), 5);
     }
-    
+
+    @Test
+    public void testPop() {
+        Stack s = new Queue();
+        s.push(7);
+        s.push(5);
+        assertEquals(s.pop(), 5);
+        assertEquals(s.pop(), 7);
+        assertEquals(s.pop(), null);
+    }
+
+	@Test
+    public void testPush() {
+        Stack s = new Queue();
+        s.push(7);
+        assertEquals(s.peek(), 7);
+        s.push(5);
+        assertEquals(s.peek(), 7);
+    }
 }

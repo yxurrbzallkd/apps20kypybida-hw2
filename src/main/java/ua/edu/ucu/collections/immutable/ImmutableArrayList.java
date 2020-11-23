@@ -9,7 +9,7 @@ public class ImmutableArrayList implements ImmutableList{
 		this.data  = new Object[0];
 	}
 
-	public ImmutableArrayList(Object[] data){
+	public ImmutableArrayList(Object[] data) {
 		this.data = data;
 	}
 

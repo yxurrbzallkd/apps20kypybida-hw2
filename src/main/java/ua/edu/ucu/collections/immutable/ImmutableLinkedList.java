@@ -2,19 +2,19 @@ package ua.edu.ucu.collections.immutable;
 import java.util.Arrays;
 
 
-public class ImmutableLinkedList implements ImmutableList{
-	private class Node{
+public class ImmutableLinkedList implements ImmutableList {
+	private class Node {
 		public Object item;
 		public Node next;
 		public Node previous;
 
-		public Node(Object item, Node next, Node previous){
+		public Node(Object item, Node next, Node previous) {
 			this.item = item;
 			this.next = next;
 			this.previous = previous;
 		}
 
-		public Node copy(){
+		public Node copy() {
 			return new Node(this.item, this.next, this.previous);
 		}
 	}
@@ -46,7 +46,7 @@ public class ImmutableLinkedList implements ImmutableList{
 		return arr;
 	}
 
-    public ImmutableLinkedList add(int index, Object e) throws IndexOutOfBoundsException{
+    public ImmutableLinkedList add(int index, Object e) throws IndexOutOfBoundsException {
 		//adds elemet at index, exception if index out of range
 		if ((index < 0) || (index >= this.size())) {
 			throw new IndexOutOfBoundsException("can't add at index "+index);

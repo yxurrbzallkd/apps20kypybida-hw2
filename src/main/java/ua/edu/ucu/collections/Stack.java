@@ -5,28 +5,28 @@ import ua.edu.ucu.collections.immutable.ImmutableLinkedList;
 public class Stack {
 	private ImmutableLinkedList stack;
 
-	public Stack(){
+	public Stack() {
 		this.stack = new ImmutableLinkedList();
 	}
-    public Object peek(){
+    public Object peek() {
 		//Returns the object from the top of the Stack without removing it
 		//Returns null if stack is empty
-		if (this.stack.isEmpty()){
+		if (this.stack.isEmpty()) {
 			return null;
 		}
 		return this.stack.getLast();
 	}
-	public Object pop(){
+	public Object pop() {
 		//Removes and returns the object from the top of the Stack
 		Object top = this.stack.getLast();
 		this.stack = this.stack.removeLast();
 		return top;
 	}
-	public void push(Object e){
+	public void push(Object e) {
 		//Adds an object to the the top of the Stack
 		this.stack = this.stack.addLast(e);
 	}
-	public String toString(){
+	public String toString() {
 		return "Stack "+this.stack.toString()+" < TOP";
 	}
 }
