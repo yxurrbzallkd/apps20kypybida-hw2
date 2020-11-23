@@ -142,4 +142,11 @@ public class ImmutableArrayListTest {
         assertEquals(arr1.isEmpty(), true);
         assertEquals(arr2.isEmpty(), true);
     }
+
+    @Test
+    public void testToString() {
+        Object[] obj = {3, 4, 5};
+        ImmutableArrayList arr = new ImmutableArrayList(obj);
+        assertEquals(arr.toString(), "[3, 4, 5]");
+    }
 }

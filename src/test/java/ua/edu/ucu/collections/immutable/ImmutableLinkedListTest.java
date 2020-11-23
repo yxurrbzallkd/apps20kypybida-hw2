@@ -237,4 +237,12 @@ public class ImmutableLinkedListTest {
         arr = new ImmutableLinkedList();
         arr.removeLast();
     }
+
+    @Test
+    public void testToString() {
+        Object[] obj = {3, 4, 5};
+        ImmutableLinkedList arr = new ImmutableLinkedList();
+        arr = arr.addAll(obj);
+        assertEquals(arr.toString(), "[3, 4, 5]");
+    }
 }
