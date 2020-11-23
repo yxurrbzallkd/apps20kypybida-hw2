@@ -3,8 +3,6 @@ package ua.edu.ucu.collections.immutable;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import java.rmi.server.ObjID;
-
 public class ImmutableArrayListTest {
     
     @Test

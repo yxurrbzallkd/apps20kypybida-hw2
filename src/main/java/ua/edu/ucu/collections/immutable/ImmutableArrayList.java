@@ -10,7 +10,7 @@ public class ImmutableArrayList implements ImmutableList{
 	}
 
 	public ImmutableArrayList(Object[] data) {
-		this.data = data;
+		this.data = Arrays.copyOf(data, data.length);
 	}
 
 	public ImmutableArrayList add(Object e) {
