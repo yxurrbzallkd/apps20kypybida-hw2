@@ -79,8 +79,9 @@ public class ImmutableLinkedListTest {
     public void testRemove() {
         ImmutableLinkedList arr = new ImmutableLinkedList();
         arr = arr.addAll(new Object[] {3, 4, 5});
-        arr.remove(0);
-        assertEquals(arr.toArray(), new Object[] {4, 5});
+        ImmutableLinkedList arr1 = arr.remove(1);
+        assertEquals(arr.toArray(), new Object[] {3, 4, 5});
+        assertEquals(arr1.toArray(), new Object[] {3, 5});
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
