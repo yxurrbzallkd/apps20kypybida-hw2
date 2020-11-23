@@ -96,6 +96,7 @@ public class ImmutableArrayListTest {
     public void testSet() {
         Object[] obj = {3, 4, 5};
         ImmutableArrayList arr = new ImmutableArrayList();
+        arr = arr.addAll(obj);
         ImmutableArrayList arr1 = arr.set(0, 8);
         assertEquals(arr.toArray(), obj);
         assertEquals(arr1.get(0), 8);
