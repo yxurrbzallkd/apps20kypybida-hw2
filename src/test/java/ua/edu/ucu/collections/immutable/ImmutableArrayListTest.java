@@ -78,7 +78,7 @@ public class ImmutableArrayListTest {
 
     @Test
     public void testRemove() {
-        ImmutableArrayList arr = new ImmutableArrayList(new Objcet[] {3, 4, 5});
+        ImmutableArrayList arr = new ImmutableArrayList(new Object[] {3, 4, 5});
         arr.remove(0);
         assertEquals(arr.toArray(), new Object[] {4, 5});
     }
